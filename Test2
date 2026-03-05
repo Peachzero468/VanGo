@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vanier SchoolPath</title>
+<style>
+body{
+font-family: Arial;
+background:#f5f5f5;
+text-align:center;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+max-width:600px;
+margin:auto;
+}
+
+select,button{
+padding:10px;
+margin:10px;
+font-size:16px;
+}
+
+#result{
+margin-top:20px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>Vanier SchoolPath</h1>
+<p>Fastest Route Finder (Example)</p>
+
+<select id="start">
+<option>Main Entrance</option>
+<option>Room 101</option>
+<option>Library</option>
+<option>Gym</option>
+<option>Cafeteria</option>
+</select>
+
+<select id="end">
+<option>Library</option>
+<option>Gym</option>
+<option>Cafeteria</option>
+<option>Main Entrance</option>
+<option>Room 101</option>
+</select>
+
+<br>
+
+<button onclick="findRoute()">Find Route</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+function findRoute(){
+let start=document.getElementById("start").value;
+let end=document.getElementById("end").value;
+
+let time=Math.floor(Math.random()*120)+30;
+
+document.getElementById("result").innerHTML=
+"Fastest route from "+start+" to "+end+" takes about "+time+" seconds.";
+}
+</script>
+
+</body>
+</html>
